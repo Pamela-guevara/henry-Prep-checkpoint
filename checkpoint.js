@@ -4,18 +4,16 @@ function menorMayor(numeros) {
     // Escribi una función llamada menorMayor que tome como entrada un arreglo de números y devuelva un arreglo 
     // que contenga el menor número del arreglo en la posición cero y el mayor número del arreglo en la posición 1.
     // Ej: menorMayor([4, 6, 1, 7, 15]) // retorna [1, 15]
-    var menor = numeros[0];
-    var mayor = numeros[0];
-    for (var i = 1; i < numeros.length; i++) {
-        for (var j = 1; j < numeros.length; j++) {
-            if (numeros[i] < menor && numeros[j] > mayor) {
-                menor = numeros[i];
-                mayor = numeros[j];
-            }
-        }
-        return menor, mayor;
-    }
+
+    var mM = [];
+    var minimo = Math.min(...numeros);
+    mM.push(minimo);
+    var grande = Math.max(...numeros);
+    mM.push(grande);
+    return mM;
 }
+
+
 
 function stringMasLarga(strings) {
     // Escribe una función llamada stringMasLarga, que tome un arreglo de strings llamado 'strings'
@@ -185,7 +183,6 @@ function filtrar(funcion) {
     // productos.filtrar(function(p) {
     //   return p.price >= 50;
     // }) => [{price: 100, name:'tv'}]
-
 };
 
 // No modifiques nada debajo de esta linea
